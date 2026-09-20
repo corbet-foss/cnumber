@@ -1,0 +1,15 @@
+{
+  "name": "@corbet-foss/cnumber",
+  "version": "0.1.0",
+  "exports": "./src/index.ts",
+  "license": "LGPL-3.0-only WITH LGPL-3.0-linking-exception",
+  "publish": {
+    "include": [
+      "src/**/*.ts",
+      "README.md",
+      "LICENSES/**",
+      "package.json",
+      "jsr.json"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+[package]
+name = "cnumber"
+version = "0.1.0"
+entrypoint = "typst/number.typ"
+authors = ["Julian Y. Richard Corbet"]
+license = "LGPL-3.0-only WITH LGPL-3.0-linking-exception"
+description = "Deterministic locale-correct number formatting for formal correspondence. Mirrors the cnumber Rust crate release line."
+repository = "https://github.com/corbet-foss/cnumber"
+exclude = [".git", ".github", ".crow", "target", "dist", "js", "py", "tests", "scripts"]

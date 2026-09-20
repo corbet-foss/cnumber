@@ -1,0 +1,64 @@
+{
+  "fallback": "en",
+  "locales": {
+    "de": {
+      "decimal": ",",
+      "group": "."
+    },
+    "de-at": {
+      "decimal": ",",
+      "group": "."
+    },
+    "de-ch": {
+      "amtlich_text_decimal": ",",
+      "decimal": ".",
+      "group": "'"
+    },
+    "de-li": {
+      "amtlich_text_decimal": ",",
+      "decimal": ".",
+      "group": "'"
+    },
+    "en": {
+      "decimal": ".",
+      "group": ","
+    },
+    "en-gb": {
+      "decimal": ".",
+      "group": ","
+    },
+    "en-us": {
+      "decimal": ".",
+      "group": ","
+    },
+    "fr": {
+      "decimal": ",",
+      "group": "\u202f"
+    },
+    "fr-ch": {
+      "decimal": ".",
+      "group": "'"
+    },
+    "it": {
+      "decimal": ",",
+      "group": "."
+    },
+    "it-ch": {
+      "decimal": ".",
+      "group": "'"
+    }
+  },
+  "supported": [
+    "de",
+    "de-at",
+    "de-ch",
+    "de-li",
+    "en",
+    "en-gb",
+    "en-us",
+    "fr",
+    "fr-ch",
+    "it",
+    "it-ch"
+  ]
+}

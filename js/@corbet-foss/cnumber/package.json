@@ -1,0 +1,70 @@
+{
+  "name": "@corbet-foss/cnumber",
+  "version": "0.1.0",
+  "description": "Deterministic locale-correct number formatting for formal correspondence. Mirrors the cnumber Rust crate release line.",
+  "license": "LGPL-3.0-only WITH LGPL-3.0-linking-exception",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corbet-foss/cnumber.git",
+    "directory": "js/@corbet-foss/cnumber"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.cts",
+        "default": "./dist/index.cjs"
+      },
+      "default": "./dist/index.js"
+    },
+    "./browser": {
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/browser.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/**/*",
+    "src/**/*",
+    "README.md",
+    "LICENSES/**/*"
+  ],
+  "scripts": {
+    "prepack": "bun run build",
+    "conformance": "bun ./scripts/conformance.mts",
+    "typecheck": "tsc --noEmit -p ./tsconfig.json",
+    "build": "bun ./scripts/build.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "25.8.0",
+    "typescript": "6.0.3"
+  },
+  "module": "./dist/index.js",
+  "unpkg": "./dist/browser.js",
+  "jsdelivr": "./dist/browser.js",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "homepage": "https://github.com/corbet-foss/cnumber#readme",
+  "bugs": {
+    "url": "https://github.com/corbet-foss/cnumber/issues"
+  },
+  "keywords": [
+    "i18n",
+    "correspondence",
+    "typescript",
+    "rust",
+    "cnumber"
+  ]
+}

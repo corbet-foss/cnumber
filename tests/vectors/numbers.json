@@ -1,0 +1,218 @@
+[
+  {
+    "name": "german basic",
+    "fn": "format_number",
+    "locale": "de",
+    "canonical": "1234567.89",
+    "expected": "1.234.567,89"
+  },
+  {
+    "name": "austrian basic",
+    "fn": "format_number",
+    "locale": "de-at",
+    "canonical": "1234567.89",
+    "expected": "1.234.567,89"
+  },
+  {
+    "name": "swiss cldr",
+    "fn": "format_number",
+    "locale": "de-ch",
+    "canonical": "1234567.89",
+    "expected": "1'234'567.89"
+  },
+  {
+    "name": "swiss amtlich running text",
+    "fn": "format_number",
+    "locale": "de-ch",
+    "canonical": "1234567.89",
+    "expected": "1'234'567,89",
+    "style": "amtlich"
+  },
+  {
+    "name": "liechtenstein amtlich running text",
+    "fn": "format_number",
+    "locale": "de-li",
+    "canonical": "1234567.89",
+    "expected": "1'234'567,89",
+    "style": "amtlich"
+  },
+  {
+    "name": "english basic",
+    "fn": "format_number",
+    "locale": "en",
+    "canonical": "1234567.89",
+    "expected": "1,234,567.89"
+  },
+  {
+    "name": "french basic",
+    "fn": "format_number",
+    "locale": "fr",
+    "canonical": "1234567.89",
+    "expected": "1\u202f234\u202f567,89"
+  },
+  {
+    "name": "swiss french",
+    "fn": "format_number",
+    "locale": "fr-ch",
+    "canonical": "1234567.89",
+    "expected": "1'234'567.89"
+  },
+  {
+    "name": "italian basic",
+    "fn": "format_number",
+    "locale": "it",
+    "canonical": "1234567.89",
+    "expected": "1.234.567,89"
+  },
+  {
+    "name": "swiss italian",
+    "fn": "format_number",
+    "locale": "it-ch",
+    "canonical": "1234567.89",
+    "expected": "1'234'567.89"
+  },
+  {
+    "name": "amtlich elsewhere identical to cldr",
+    "fn": "format_number",
+    "locale": "en",
+    "canonical": "1234567.89",
+    "expected": "1,234,567.89",
+    "style": "amtlich"
+  },
+  {
+    "name": "four digits stay ungrouped",
+    "fn": "format_number",
+    "locale": "de",
+    "canonical": "1234",
+    "expected": "1234"
+  },
+  {
+    "name": "four digits with decimals stay ungrouped",
+    "fn": "format_number",
+    "locale": "de",
+    "canonical": "1234.56",
+    "expected": "1234,56"
+  },
+  {
+    "name": "five digits group",
+    "fn": "format_number",
+    "locale": "de",
+    "canonical": "12345",
+    "expected": "12.345"
+  },
+  {
+    "name": "grouping off",
+    "fn": "format_number",
+    "locale": "de",
+    "canonical": "1234567.89",
+    "expected": "1234567,89",
+    "grouping": false
+  },
+  {
+    "name": "year never groups at four digits",
+    "fn": "format_number",
+    "locale": "de",
+    "canonical": "2026",
+    "expected": "2026"
+  },
+  {
+    "name": "negative four digits stay ungrouped",
+    "fn": "format_number",
+    "locale": "de",
+    "canonical": "-1234.5",
+    "expected": "-1234,5"
+  },
+  {
+    "name": "negative large english",
+    "fn": "format_number",
+    "locale": "en",
+    "canonical": "-1234567.89",
+    "expected": "-1,234,567.89"
+  },
+  {
+    "name": "zero with fraction",
+    "fn": "format_number",
+    "locale": "de",
+    "canonical": "0.5",
+    "expected": "0,5"
+  },
+  {
+    "name": "unknown style",
+    "fn": "format_number",
+    "locale": "de",
+    "canonical": "1234.5",
+    "expected": null,
+    "style": "fancy"
+  },
+  {
+    "name": "empty string",
+    "fn": "format_number",
+    "locale": "de",
+    "canonical": "",
+    "expected": null
+  },
+  {
+    "name": "comma decimal rejected",
+    "fn": "format_number",
+    "locale": "de",
+    "canonical": "12,34",
+    "expected": null
+  },
+  {
+    "name": "letters rejected",
+    "fn": "format_number",
+    "locale": "de",
+    "canonical": "abc",
+    "expected": null
+  },
+  {
+    "name": "pre-grouped input rejected",
+    "fn": "format_number",
+    "locale": "de-ch",
+    "canonical": "1'234",
+    "expected": null
+  },
+  {
+    "name": "double dot rejected",
+    "fn": "format_number",
+    "locale": "de",
+    "canonical": "1.2.3",
+    "expected": null
+  },
+  {
+    "name": "german symbols",
+    "fn": "symbols",
+    "locale": "de",
+    "expected": {
+      "decimal": ",",
+      "group": "."
+    }
+  },
+  {
+    "name": "swiss symbols",
+    "fn": "symbols",
+    "locale": "de-ch",
+    "expected": {
+      "decimal": ".",
+      "group": "'"
+    }
+  },
+  {
+    "name": "french symbols",
+    "fn": "symbols",
+    "locale": "fr",
+    "expected": {
+      "decimal": ",",
+      "group": "\u202f"
+    }
+  },
+  {
+    "name": "symbols fall back to english",
+    "fn": "symbols",
+    "locale": "xx",
+    "expected": {
+      "decimal": ".",
+      "group": ","
+    }
+  }
+]

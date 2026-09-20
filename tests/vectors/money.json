@@ -1,0 +1,18 @@
+[
+  { "name": "swiss francs", "fn": "format_money", "locale": "de-ch", "canonical": "1234.56", "currency": "CHF", "expected": "Fr. 1'234.56", "display": "symbol" },
+  { "name": "swiss francs large", "fn": "format_money", "locale": "de-ch", "canonical": "1234567.89", "currency": "CHF", "expected": "Fr. 1'234'567.89", "display": "symbol" },
+  { "name": "liechtenstein francs", "fn": "format_money", "locale": "de-li", "canonical": "1234.56", "currency": "CHF", "expected": "Fr. 1'234.56", "display": "symbol" },
+  { "name": "francs use swiss style everywhere", "fn": "format_money", "locale": "en", "canonical": "1234.56", "currency": "CHF", "expected": "Fr. 1'234.56", "display": "symbol" },
+  { "name": "negative francs", "fn": "format_money", "locale": "de-ch", "canonical": "-1234.56", "currency": "CHF", "expected": "Fr. -1'234.56", "display": "symbol" },
+  { "name": "german euros", "fn": "format_money", "locale": "de", "canonical": "1234.56", "currency": "EUR", "expected": "1.234,56 €", "display": "symbol" },
+  { "name": "german euros large", "fn": "format_money", "locale": "de", "canonical": "1234567.89", "currency": "EUR", "expected": "1.234.567,89 €", "display": "symbol" },
+  { "name": "english euros", "fn": "format_money", "locale": "en", "canonical": "1234.56", "currency": "EUR", "expected": "€1,234.56", "display": "symbol" },
+  { "name": "french euros", "fn": "format_money", "locale": "fr", "canonical": "1234567.89", "currency": "EUR", "expected": "1 234 567,89 €", "display": "symbol" },
+  { "name": "italian euros", "fn": "format_money", "locale": "it", "canonical": "1234.56", "currency": "EUR", "expected": "1.234,56 €", "display": "symbol" },
+  { "name": "dollars unsupported", "fn": "format_money", "locale": "en", "canonical": "1234.56", "currency": "USD", "expected": null, "display": "symbol" },
+  { "name": "bad input is no amount", "fn": "format_money", "locale": "de", "canonical": "12,34", "currency": "EUR", "expected": null, "display": "symbol" },
+  { "name": "swiss francs code form", "fn": "format_money", "locale": "de-ch", "canonical": "100000", "currency": "CHF", "display": "code", "expected": "CHF 100'000" },
+  { "name": "swiss francs code keeps decimals", "fn": "format_money", "locale": "de-ch", "canonical": "1234.56", "currency": "CHF", "display": "code", "expected": "CHF 1'234.56" },
+  { "name": "euro code form german", "fn": "format_money", "locale": "de", "canonical": "1234567.89", "currency": "EUR", "display": "code", "expected": "EUR 1.234.567,89" },
+  { "name": "unknown display rejects", "fn": "format_money", "locale": "de-ch", "canonical": "1234.56", "currency": "CHF", "display": "short", "expected": null }
+]

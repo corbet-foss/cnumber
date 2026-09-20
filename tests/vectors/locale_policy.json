@@ -1,0 +1,58 @@
+[
+  {
+    "name": "returned locale IDs are lowercase",
+    "fn": "available_locales",
+    "expected": [
+      "de",
+      "de-at",
+      "de-ch",
+      "de-li",
+      "en",
+      "en-gb",
+      "en-us",
+      "fr",
+      "fr-ch",
+      "it",
+      "it-ch"
+    ]
+  },
+  {
+    "name": "swiss german supported",
+    "fn": "is_supported",
+    "locale": "de-ch",
+    "expected": true
+  },
+  {
+    "name": "mixed-case base language supported",
+    "fn": "is_supported",
+    "locale": "DE-CH",
+    "expected": true
+  },
+  {
+    "name": "french supported",
+    "fn": "is_supported",
+    "locale": "fr",
+    "expected": true
+  },
+  {
+    "name": "unknown unsupported",
+    "fn": "is_supported",
+    "locale": "xx",
+    "expected": false
+  },
+  {
+    "name": "unknown locale falls back to english",
+    "fn": "format_number",
+    "locale": "xx",
+    "canonical": "1234567.89",
+    "expected": "1,234,567.89"
+  },
+  {
+    "name": "uppercase input resolves lowercase",
+    "fn": "format_number",
+    "locale": "DE-CH",
+    "canonical": "1234567.89",
+    "expected": "1'234'567,89",
+    "style": "amtlich"
+  }
+]
