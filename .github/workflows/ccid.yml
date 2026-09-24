@@ -60,7 +60,7 @@ permissions:
 
 jobs:
   ccid:
-    uses: corbet-infra/ccid/.github/workflows/reusable-check.yml@33600b394910c643c5a6af6dff479fb16418428a
+    uses: corbet-libs/ccid/.github/workflows/reusable-check.yml@27c248aefa3c7198be6716a884d290c717774b21
     with:
       source_commit: ${{ inputs.source_commit }}
       checks: ${{ inputs.checks }}

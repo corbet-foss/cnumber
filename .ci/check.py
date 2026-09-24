@@ -225,7 +225,7 @@ def typst_preview():
         installed.mkdir(parents=True)
         expected_files = {"typst.toml", "README.md", "LICENSE", "LICENSE.md",
                           "LICENSES/MIT.txt", "LICENSES/Apache-2.0.txt",
-                          "LICENSES/LGPL-3.0-only WITH LGPL-3.0-linking-exception.txt", "LICENSES/LGPL-3.0-linking-exception.txt", "LICENSES/GPL-3.0-only.txt",
+                          "LICENSES/LGPL-3.0-linking-exception.txt", "LICENSES/GPL-3.0-only.txt",
                           "typst/greet.typ", "tables/de.json"}
         expected_directories = {".", "LICENSES", "tables", "typst"}
         with tarfile.open(candidate, "r:gz") as archive:
@@ -242,7 +242,7 @@ def typst_preview():
         if package["license"] != "LGPL-3.0-only WITH LGPL-3.0-linking-exception":
             raise ValueError("Typst preview license differs from this release")
         for filename in ("LICENSE", "LICENSE.md", "LICENSES/MIT.txt", "LICENSES/Apache-2.0.txt",
-                         "LICENSES/LGPL-3.0-only WITH LGPL-3.0-linking-exception.txt", "LICENSES/LGPL-3.0-linking-exception.txt", "LICENSES/GPL-3.0-only.txt"):
+                         "LICENSES/LGPL-3.0-linking-exception.txt", "LICENSES/GPL-3.0-only.txt"):
             if (installed / filename).read_bytes() != (ROOT / filename).read_bytes():
                 raise ValueError(f"Typst preview license text differs: {filename}")
         readme = (installed / "README.md").read_text(encoding="utf-8")
