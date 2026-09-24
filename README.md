@@ -7,7 +7,7 @@ or network dependency. The same inputs produce the same text in Rust,
 JavaScript, Python, and Typst.
 
 ```js
-import { formatNumber } from '@corbet-foss/cnumber';
+import { formatNumber } from '@corbet-labs/cnumber';
 
 formatNumber('de-ch', '1234567.89', true, 'amtlich');
 // 1'234'567,89
@@ -20,11 +20,11 @@ formatNumber('de-ch', '1234567.89', true, 'amtlich');
 | Rust / Cargo | `cargo add cnumber` |
 | Python / pip | `python -m pip install cnumber` |
 | Python / uv | `uv add cnumber` |
-| Node.js / npm | `npm install @corbet-foss/cnumber` |
-| pnpm | `pnpm add @corbet-foss/cnumber` |
-| Yarn | `yarn add @corbet-foss/cnumber` |
-| Bun | `bun add @corbet-foss/cnumber` |
-| Deno | `deno add npm:@corbet-foss/cnumber` |
+| Node.js / npm | `npm install @corbet-labs/cnumber` |
+| pnpm | `pnpm add @corbet-labs/cnumber` |
+| Yarn | `yarn add @corbet-labs/cnumber` |
+| Bun | `bun add @corbet-labs/cnumber` |
+| Deno | `deno add npm:@corbet-labs/cnumber` |
 
 The 0.1.0 release line is published to registries; the
 commands above resolve once it is. Python requires 3.10+, Node.js 20+.

@@ -1,5 +1,5 @@
 {
-  "name": "@corbet-foss/cnumber",
+  "name": "@corbet-labs/cnumber",
   "version": "0.1.0",
   "description": "Deterministic locale-correct number formatting for formal correspondence. Mirrors the cnumber Rust crate release line.",
   "license": "LGPL-3.0-only WITH LGPL-3.0-linking-exception",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/corbet-foss/cnumber.git",
-    "directory": "js/@corbet-foss/cnumber"
+    "directory": "js/@corbet-labs/cnumber"
   },
   "type": "module",
   "main": "./dist/index.cjs",
