@@ -13,10 +13,12 @@ package = root / "js/@corbet-labs" / name
 for manifest in ("package.json", "jsr.json"):
     metadata = json.loads((package / manifest).read_text())
     assert metadata["version"] == version
-    # Every manifest declares the full LGPL-3.0-only WITH
-    # LGPL-3.0-linking-exception grant; the exception text ships in the
-    # published file set (no publish.exclude carve-out).
-    assert metadata["license"] == license_id
+    # JSR publish validation only accepts bare SPDX ids
+    # (https://jsr.io/schema/config-file.v1.json): jsr.json declares plain
+    # LGPL-3.0-only while every other manifest carries the full WITH
+    # expression. The linking exception text ships in LICENSES/**.
+    expected_license = "LGPL-3.0-only" if manifest == "jsr.json" else license_id
+    assert metadata["license"] == expected_license
 for manifest, key in (("py/pyproject.toml", "project"), ("typst.toml", "package")):
     metadata = tomllib.loads((root / manifest).read_text())[key]
     assert metadata["version"] == version
